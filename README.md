@@ -141,3 +141,17 @@ CORS_ALLOWED_ORIGINS = [
 
 ### steps
 - npm i react-router-dom
+
+##  Creating a Navrbar with MUI
+- Installing packages for MUI
+- Picking our preferred Navigation Menu
+- Customizing it to display our menu items
+- Adding the Navbar to our App.js file
+- Fitting our content in the remaining space
+- Making our Navigation menu response
+### steps
+-  MUI(website - https://mui.com/material-ui/)
+- C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/material @emotion/react @emotion/styled
+- MUI icons - https://mui.com/material-ui/material-icons/
+- C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/icons-material 
+- 
