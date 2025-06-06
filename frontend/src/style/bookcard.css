@@ -1,0 +1,36 @@
+/* BookCard.css */
+.book-card {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-image {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+.discount {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.order-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background-color: #d9363e;
+}
