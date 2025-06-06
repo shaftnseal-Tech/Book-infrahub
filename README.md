@@ -155,12 +155,15 @@ CORS_ALLOWED_ORIGINS = [
 - MUI icons - https://mui.com/material-ui/material-icons/
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/icons-material 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 -
 
 
 ## frontend\
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install lucide-react
 - 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
