@@ -3,8 +3,8 @@ import  { useState } from "react";
 import { Truck, ShieldCheck, BadgeDollarSign, Undo2 } from 'lucide-react';
 import FeaturesCard from './FeaturesCard';
 import CarouselBanner from './CarouselBanner'
- import '../style/home.css';
- import BookCard from './Bookcard';
+import '../style/home.css';
+import BookCard from './Bookcard';
 import Tabs from "../components/Tab";
 import BookList from '../components/Booklist'
 import { books } from "../data";
@@ -45,10 +45,8 @@ const Home = () => {
      
     </div> 
    <div className="App">
-        <h2>Special Products
-
-</h2>
-<p>Contrary to popular belief, Lorem Ipsum is not simply random.</p>
+    <h2>Special Products</h2>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random.</p>
       <Tabs selectedTab={selectedTab} onTabChange={setSelectedTab} />
       <BookList books={books[selectedTab]} />
     </div>
@@ -59,7 +57,6 @@ const Home = () => {
       <FeaturesCard Icon={BadgeDollarSign} title="Best Price" subtitle="Guaranteed Low Cost" />
       <FeaturesCard Icon={Undo2} title="Easy Return" subtitle="Within 30 Days returns" />
     </div>
-
     </>
   )
 }

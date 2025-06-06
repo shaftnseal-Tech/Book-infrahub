@@ -154,4 +154,9 @@ CORS_ALLOWED_ORIGINS = [
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/material @emotion/react @emotion/styled
 - MUI icons - https://mui.com/material-ui/material-icons/
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/icons-material 
+-
+
+
+## frontend\
+- C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install lucide-react
 - 
