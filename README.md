@@ -2,10 +2,10 @@
 - Creating our Reactjs Frontend
 - Page navigation with React Js Frontend
 - Creating a Navrbar with MUI
-- Basic CRUD operation
+- 
 
 -------------
-## Backend project and env setup
+## Backend project and env setupBasic CRUD operation
 - creating a virtual environment
 - Installing packages
 - creating our django project and app
@@ -150,7 +150,7 @@ CORS_ALLOWED_ORIGINS = [
 - Fitting our content in the remaining space
 - Making our Navigation menu response
 ### steps
--  MUI(website - https://mui.com/material-ui/)
+- MUI(website - https://mui.com/material-ui/)
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/material @emotion/react @emotion/styled
 - MUI icons - https://mui.com/material-ui/material-icons/
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/icons-material 
@@ -160,3 +160,12 @@ CORS_ALLOWED_ORIGINS = [
 ## frontend\
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install lucide-react
 - 
+
+
+##Basic CRUD operation
+- Creating the models for project
+- Migrating models and registration in admin
+- Create user and view model in admin portal
+- Creating views and urls using viewsets
+- Creating serializers
+- chking functionality

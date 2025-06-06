@@ -1,118 +1,107 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import AppBar from "@mui/material/AppBar";
-import CssBaseline from "@mui/material/CssBaseline";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
+import {
+  AppBar, Toolbar, Typography, Box,
+  IconButton, Menu, MenuItem, Button
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
-import Typography from "@mui/material/Typography";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from '@mui/icons-material/Info';
-import CreateIcon from '@mui/icons-material/Create';
-import {IconButton} from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
 
-export default function Navbar(props) {
-  const {drawerWidth,content}=props
+const pages = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/aboutus" },
+  { name: "Create", path: "/create" },
+];
+
+export default function Navbar({ content }) {
   const location = useLocation();
-  const path = location.pathname;
-  const [open, setOpen] = React.useState(false);
-  const changeOpenStatus=()=>{
-    setOpen(!open)
-  }
-  const myDrawer=(
-    <div>
-        <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
-          <List>
-            <ListItem disablePadding>
-              <ListItemButton component={Link} to="/" selected={"/" === path}>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary={"Home"} />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component={Link} to="/aboutus" selected={"/aboutus" === path}>
-                <ListItemIcon>
-                  <InfoIcon />
-                </ListItemIcon>
-                <ListItemText primary={"Aboutus"} />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton component={Link} to="/create" selected={"/create" === path}>
-                <ListItemIcon>
-                  <CreateIcon />
-                </ListItemIcon>
-                <ListItemText primary={"Create"} />
-              </ListItemButton>
-            </ListItem>
-            
-          </List>
-        </Box>
-    </div>
-  )
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
+    <>
+      <AppBar position="fixed">
         <Toolbar>
-        <IconButton  
-        color="inherit"
-        onClick={changeOpenStatus}
-        sx={{mr: 2, display: { sm: "none" } }}
-        >
-            <MenuIcon />
-        </IconButton>
-          <Typography variant="h6" noWrap component="div">
-           Bookie
+          {/* Mobile: Hamburger Menu */}
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="menu"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              anchorEl={anchorElNav}
+              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+              keepMounted
+              transformOrigin={{ vertical: "top", horizontal: "left" }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: "block", md: "none" } }}
+            >
+              {pages.map((page) => (
+                <MenuItem
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  component={Link}
+                  to={page.path}
+                  selected={location.pathname === page.path}
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          {/* Logo */}
+          <Typography
+            variant="h6"
+            noWrap
+            component={Link}
+            to="/"
+            sx={{
+              mr: 2,
+              textDecoration: "none",
+              color: "inherit",
+              fontWeight: "bold",
+              flexGrow: { xs: 1, md: 0 },
+            }}
+          >
+            Bookie
           </Typography>
+
+          {/* Desktop Links */}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page.name}
+                component={Link}
+                to={page.path}
+                sx={{
+                  my: 2,
+                  color: location.pathname === page.path ? "yellow" : "white",
+                  display: "block",
+                }}
+              >
+                {page.name}
+              </Button>
+            ))}
+          </Box>
         </Toolbar>
       </AppBar>
-      <Drawer
-        variant="permanent"
-        sx={{
-          display:{xs:"none",sm:"block"},
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
-      >
-        {myDrawer}
-      </Drawer>
-       <Drawer
-        variant="temporary"
-        open={open}
-        onClose={changeOpenStatus}
-        sx={{
-          display:{xs:"block",sm:"none"},
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
-      >
-        {myDrawer}
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <Toolbar />
+
+      {/* Content below navbar */}
+      <Box component="main" sx={{ mt: 8, p: 3 }}>
         {content}
       </Box>
-    </Box>
+    </>
   );
 }
