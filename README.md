@@ -154,4 +154,12 @@ CORS_ALLOWED_ORIGINS = [
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/material @emotion/react @emotion/styled
 - MUI icons - https://mui.com/material-ui/material-icons/
 - C:\Users\learn\OneDrive\Desktop\Book\frontend>npm install @mui/icons-material 
-- 
+
+
+##Basic CRUD operation
+- Creating the models for project
+- Migrating models and registration in admin
+- Create user and view model in admin portal
+- Creating views and urls using viewsets
+- Creating serializers
+- chking functionality
