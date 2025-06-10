@@ -1,0 +1,93 @@
+::marker {
+    color: #000;
+}
+
+form.faq_form {
+    margin-left: 8px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.css-vwbsoz-MuiButtonBase-root-MuiButton-root {
+    margin-left: 1rem;
+}
+
+.MuiInputLabel-root {
+    color: grey;
+    font-size: 16px !important;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: none;
+}
+
+/* Media query for tablets (768px and smaller) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .faq_form {
+        gap: 12px;
+    }
+
+    .faq_fild,
+    .faq_fild1 {
+        width: 100%;
+    }
+
+    .product-breadcrumb {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .css-ak17hc {
+        margin-left: 2%;
+        width: 31vh;
+    }
+    .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-4.faq_container.css-1mvfsoe-MuiGrid-root {
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
+}
+
+/* Media query for mobile devices (480px and smaller) */
+@media (max-width: 767px) {
+    .faq_form {
+        gap: 10px;
+    }
+
+    .faq_fild,
+    .faq_fild1 {
+        width: 100%;
+    }
+
+    .product-breadcrumb {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+
+    .MuiTypography-h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .MuiButton-root {
+        width: 100%;
+    }
+
+    .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-4.css-1mvfsoe-MuiGrid-root {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .css-ak17hc {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .css-1mvfsoe-MuiGrid-root>.MuiGrid-item {
+        padding-left: 1px;
+    }
+
+    form.faq_form {
+        margin-left: 1px;
+    }
+
+   
+}

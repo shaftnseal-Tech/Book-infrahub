@@ -1,0 +1,52 @@
+.recent-orders-container {
+    padding: 20px;
+    width: 100%;
+}
+
+.recent-orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.table-container {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-header {
+    background-color: #E4E7E9;
+    color: #475156;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.action-button {
+    text-transform: none;
+}
+.view-all {
+    cursor: pointer;
+    color: #0712B7; 
+    font-weight: 500;
+}
+.view-all:hover {
+    text-decoration: underline;
+}
+.action-dashboard{
+    color:#2DA5F3;
+}
+.status.delivered {
+    color: green;
+    font-weight: bold;
+}
+.status.pending {
+    color: orange;
+    font-weight: bold;
+}
+.status.cancelled {
+    color: red;
+    font-weight: bold;
+}

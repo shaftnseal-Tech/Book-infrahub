@@ -1,0 +1,85 @@
+/* Footer Container (Wrapper for both main footer and copyright) */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* min-height: 200px; */
+}
+
+/* Footer Container */
+.footer {
+  background-color: #dadada;
+  color: rgba(0, 0, 0, 0.46);
+  padding: 40px 0;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Footer Section Titles */
+h6 {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Footer Links */
+.footer-link {
+  display: block;
+  color: rgba(0, 0, 0, 0.46);
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: #000000;
+}
+
+/* Grid and Section Spacing */
+.footer-section {
+  padding: 0 20px;
+  color: rgba(0, 0, 0, 0.46);
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Copyright Section */
+.footer-copyright {
+  text-align: center;
+  border-top: 1px solid #444;
+  background-color: #0712b7;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 20px 0;
+  margin-top: 0;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+/* Responsiveness: Stack sections on smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer-section {
+    padding: 10px 0;
+  }
+
+  .footer-copyright {
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+}
